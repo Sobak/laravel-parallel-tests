@@ -55,7 +55,7 @@ jobs:
       - name: Create database
         run: |
           sudo systemctl start mysql.service
-          mysql  -u root -proot -e 'CREATE DATABASE IF NOT EXISTS testing;'
+          mysql  -u root -proot -e 'CREATE DATABASE IF NOT EXISTS laravel_parallel_testing;'
 
       - name: Run migrations
         run: php artisan migrate
